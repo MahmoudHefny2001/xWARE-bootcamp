@@ -92,3 +92,7 @@ college=# SELECT * FROM student;
 (6 rows)
 
 college=# 
+
+DELETE FROM professor where salary > 20000;
+DELETE 3
+
