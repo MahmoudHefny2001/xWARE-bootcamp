@@ -1,8 +1,8 @@
 
-/1/----> select * from cd.facilities;
-/2/----> select name, membercost from cd.facilities;
-/3/----> select * from cd.facilities where membercost > 0
-/4/----> select facid, name, membercost, monthlymaintenance from cd.facilities where membercost < (monthlymaintenance / 50.0) and membercost > 0;
+* ----> select * from cd.facilities;
+* ----> select name, membercost from cd.facilities;
+* ----> select * from cd.facilities where membercost > 0
+* ----> select facid, name, membercost, monthlymaintenance from cd.facilities where membercost < (monthlymaintenance / 50.0) and membercost > 0;
 
-/5/----> select * from cd.facilities where name LIKE '%Tennis%';
-/6/-----> select * from cd.facilities where facid in (1,5);
+* ----> select * from cd.facilities where name LIKE '%Tennis%';
+* -----> select * from cd.facilities where facid in (1,5);
