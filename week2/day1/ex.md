@@ -1,20 +1,12 @@
-#first (exercises on the Faculty DB)
+# (exercises on the Faculty DB)
 
-# - Insert Data Into These Tables.
-#Insert One Faculty
-#Insert Three Departments Into This Faculty
-#Insert Three Subjects In Every Department
-#Insert Courses With Defferent Durations
-#Insert Atleast Five Students In Every Department
-#Insert Exams For Every Course
 
-*************************************************************
 sudo -u postgres psql
 
 \l
 
 
-create database Faculty_DB;
+## Connect database Faculty_DB;
 
 \c faculty_db
 
@@ -26,15 +18,15 @@ select * from faculty;
 
 ---------------------------------
 
-INSERT INTO department (id,name) VALUES(1,'math');
+INSERT INTO department (id, name) VALUES(1, 'MATH101');
 
-INSERT INTO department (id,name) VALUES(2,'science');
+INSERT INTO department (id, name) VALUES(2, 'IT);
 
-INSERT INTO department (id,name) VALUES(3,'cs');
+INSERT INTO department (id, name) VALUES(3,'CS');
 
 ---------------------------------
 
-select * from department;
+# select * from department;
 
 ---------------------------------
 
