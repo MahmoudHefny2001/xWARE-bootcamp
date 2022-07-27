@@ -1,17 +1,21 @@
-test> show dbs
+test> 
+# show dbs
 test> admin 40.00 KiB
 config      108.00 KiB
 local        72.00 KiB
 myDataBase  524.00 KiB
 system      144.00 KiB
-test> use system
+test>
+# use system
 switched to db system
-system> show collections
+system>
+# show collections
 
 Messages
 Notification
 
-system> db.Messages.find()
+system>
+# db.Messages.find()
 [
   {
     _id: ObjectId("62e14eaf2cc5caae2107247b"),
