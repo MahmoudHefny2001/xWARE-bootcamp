@@ -80,62 +80,62 @@ INSERT INTO faculty (id ,name) VALUES (1, 'Mahmoud');
 ##  Check All Exams Have Different Date And Time And If So Change These So Every Exam Have Different Date And Time
  
  
-select * from student;
+### select * from student;
  
-select * from professor;
+### select * from professor;
 
-select * from subject;
+### select * from subject;
 
-select * from course;
+### select * from course;
 
-select * from exams;
+### select * from exams;
 
-select * from department;
-
-
-select * from professor where age = 40
-
-select * from professor where salary >10000;
+### select * from department;
 
 
+### select * from professor where age = 40
 
-select * from professor order by salary;
+### select * from professor where salary >10000;
+
+### select * from professor order by salary;
+
+### select * from student  order by birth_date;
+
+### SELECT AVG(salary) from professor;
 
 
+## update Address set line2 = random()::int where line2 = NULL;
 
-select * from student  order by birth_date;
+## update professor set salary = 20000 where salary > 10000;
 
+### delete from professor where salary > 10000;
 
+### update Address set line2 = random()::int where line2 = NULL;
 
-SELECT AVG(salary) from professor;
+# ALTER TABLE Student ADD Age int;
 
-
-update Address set line2 = random()::int where line2 = NULL;
-
-update professor set salary = 20000 where salary > 10000;
-
-delete from professor where salary > 10000;
-
-update Address set line2 = random()::int where line2 = NULL;
-
-ALTER TABLE Student
-ADD Age int;
-
-update Student set age = 6 where age = NULL;
-
+### update Student set age = 6 where age = NULL;
 
 
 exercises on pgexercises.com
 
-1 - Retrieve everything from a table --> https://pgexercises.com/questions/basic/selectall.html
+# 1 - Retrieve everything from a table -->
+
+https://pgexercises.com/questions/basic/selectall.html
 
 
-2- Retrieve specific columns from a table -->https://pgexercises.com/questions/basic/selectspecific.html
+# 2- Retrieve specific columns from a table -->
+
+https://pgexercises.com/questions/basic/selectspecific.html
 
 
-3 - Control which rows are retrieved --> https://pgexercises.com/questions/basic/where.html
+# 3 - Control which rows are retrieved -->
+
+https://pgexercises.com/questions/basic/where.html
 
 
-4 - Control which rows are retrieved - part 2 --> https://pgexercises.com/questions/basic/where2.html
+# 4 - Control which rows are retrieved - part 2 --> 
+
+https://pgexercises.com/questions/basic/where2.html
 
 
