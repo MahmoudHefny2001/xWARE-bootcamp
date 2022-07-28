@@ -14,7 +14,7 @@ create table if not exists student_phones(
 
 
 
-```
+<!----
  id | f_phone | l_phone | student_id 
 ----+---------+---------+------------
   1 |  654365 |  124578 |          1
@@ -25,11 +25,7 @@ create table if not exists student_phones(
   6 |   56122 |  456287 |          8
   7 |   56432 |  971355 |         10
   8 |  656532 |  001144 |         11
-
-```
-
-
-
+--->
 
 
 
@@ -44,7 +40,7 @@ create table if not exists professor_Name(
 
 
 
-```
+<!----
  id | f_name  | l_name  | professor_id 
 ----+---------+---------+--------------
   1 | Hamada  | Hassan  |            1
@@ -54,10 +50,7 @@ create table if not exists professor_Name(
   5 | Ahmed   | Ali     |            5
   6 | Mahmoud | Ismael  |           11
   7 | Amr     | Mustafa |           13
-```
-
-
-
+------>
 
 # Exercise 2
 
@@ -68,8 +61,7 @@ create table if not exists person(
 	firstName varchar(50)
 );
 
-
-```
+<!------
 {
  personid | lastname | firstname 
 ----------+----------+-----------
@@ -77,9 +69,7 @@ create table if not exists person(
         2 | Alice    | Bob
         3 | Smith    | Lee
 }	
-```
-
-
+------>
 
 
 create table if not exists address(
@@ -91,16 +81,14 @@ create table if not exists address(
 );
 
 
-
-```
+<!------
 {
  addressid |     city      |   state    | personid 
 -----------+---------------+------------+----------
          1 | New York City | New York   |        2
          2 | Leetcode      | California |        1
 }
-
-```
+---->
 
 ## INSERT steps
 
@@ -117,7 +105,7 @@ create table if not exists address(
 
 `SELECT person.firstName, lastName, city, state FROM person FULL OUTER JOIN address ON address.personId = person.personId;`
 
-```
+<!-------
 [
  firstname | lastname |     city      |   state
 -----------+----------+---------------+------------
@@ -125,5 +113,5 @@ create table if not exists address(
  Allen     | Wang     | Leetcode      | California
  Lee       | Smith    |               | 
 ]
-```
+---->
 
