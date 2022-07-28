@@ -13,7 +13,7 @@ create table if not exists student_phones(
 
 
 
-
+```
  id | f_phone | l_phone | student_id 
 ----+---------+---------+------------
   1 |  654365 |  124578 |          1
@@ -25,7 +25,7 @@ create table if not exists student_phones(
   7 |   56432 |  971355 |         10
   8 |  656532 |  001144 |         11
 
-
+```
 
 
 
@@ -55,14 +55,11 @@ create table if not exists professor_Name(
   7 | Amr     | Mustafa |           13
 ```
 
-```
+
 
 
 # Exercise 2
 
-
-
-```
 
 create table if not exists person(
 	personId serial primary key,
@@ -71,13 +68,13 @@ create table if not exists person(
 );
 
 
-
+```
  personid | lastname | firstname 
 ----------+----------+-----------
         1 | Wang     | Allen
         2 | Alice    | Bob
         3 | Smith    | Lee
-
+```
 
 
 
@@ -91,20 +88,14 @@ create table if not exists address(
 );
 
 
-
+```
  addressid |     city      |   state    | personid 
 -----------+---------------+------------+----------
          1 | New York City | New York   |        2
          2 | Leetcode      | California |        1
 
 
-
-
-
-
-```
-
-
+````
 
 
 ## INSERT steps
@@ -128,7 +119,5 @@ create table if not exists address(
  Bob       | Alice    | New York City | New York
  Allen     | Wang     | Leetcode      | California
  Lee       | Smith    |               | 
-
-
 
 ```
