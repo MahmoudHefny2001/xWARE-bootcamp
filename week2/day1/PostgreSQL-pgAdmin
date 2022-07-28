@@ -65,20 +65,20 @@ INSERT INTO Exams (id,date,duration) VALUES(8,'10-1-2022','7 week');
 
 *************************************************************
 
-# - Select Data From Thse Tables.
-#Select all Students, Professor, Subjects, Courses, Exams, Departments
-#Select all Professors with the Age is 40
-#Select all Professors with the salary greater than 10000
-#Order the Professors by the salary
-#Order the students by the Birth_Date
-#Get the average salary of the Professors
-#Update the salary of the Professors with the salary greater than 10000 to 20000
-#Delete the Professors with the salary greater than 20000
-#Update These Tables
-#Set Students Line 2
-#Add Age Column in Student Table
-#Set Students Age
-#Check All Exams Have Different Date And Time And If So Change These So Every Exam Have Different Date And Time
+##  Select Data From Thse Tables.
+## Select all Students, Professor, Subjects, Courses, Exams, Departments
+## Select all Professors with the Age is 40
+## Select all Professors with the salary greater than 10000
+## Order the Professors by the salary
+## Order the students by the Birth_Date
+## Get the average salary of the Professors
+## Update the salary of the Professors with the salary greater than 10000 to 20000
+## Delete the Professors with the salary greater than 20000
+## Update These Tables
+## Set Students Line 2
+## Add Age Column in Student Table
+## Set Students Age
+## Check All Exams Have Different Date And Time And If So Change These So Every Exam Have Different Date And Time
 
 select * from student;
 
@@ -131,26 +131,13 @@ exercises on pgexercises.com
 
 1 - Retrieve everything from a table --> https://pgexercises.com/questions/basic/selectall.html
 
-sol : 
-select *
-from cd.facilities
 
 2- Retrieve specific columns from a table -->https://pgexercises.com/questions/basic/selectspecific.html
-sol : 
 
-select name,membercost
-from cd.facilities
 
 3 - Control which rows are retrieved --> https://pgexercises.com/questions/basic/where.html
-sol : 
-select *
-from cd.facilities
-where membercost >0
+
 
 4 - Control which rows are retrieved - part 2 --> https://pgexercises.com/questions/basic/where2.html
 
-sol:
-select facid, name, membercost, monthlymaintenance 
-	from cd.facilities 
-	where 
-		membercost > 0 and (membercost < monthlymaintenance/50.0); 
+
