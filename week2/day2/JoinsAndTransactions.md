@@ -70,13 +70,11 @@ INSERT INTO Student() VALUES();
 `When i rollback, it shows me a Warning which is "there is no transaction in progress" and Rollback work in the next line`
 
 
-
-
-===============================================================================================================================================================================================================================================================
+--------------------------------------------------
 
 
 
-## "Join" exercise
+# "Join" exercise
 
 `Select subject.id, name, code, duration from subject INNER JOIN course ON course.subject_id = subject.id;`
 
