@@ -1,3 +1,4 @@
+```  postgresql commands
 # (exercises on the Faculty DB)
 
 
