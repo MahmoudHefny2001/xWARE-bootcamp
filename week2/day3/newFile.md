@@ -1,4 +1,5 @@
-## Exercise 1_ Normalize Student and Professor
+# Exercise 1
+# Normalize Student and Professor
 
 ```
 
@@ -57,7 +58,7 @@ create table if not exists professor_Name(
 ```
 
 
-## Exercise 2:-
+# Exercise 2
 
 
 
