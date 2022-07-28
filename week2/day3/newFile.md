@@ -1,5 +1,6 @@
 # Exercise 1
-# Normalize Student and Professor
+
+## Normalize Student and Professor
 
 ```
 
@@ -12,7 +13,7 @@ create table if not exists student_phones(
 );
 
 
-
+<!
 ```
  id | f_phone | l_phone | student_id 
 ----+---------+---------+------------
@@ -26,7 +27,7 @@ create table if not exists student_phones(
   8 |  656532 |  001144 |         11
 
 ```
-
+-->
 
 
 
@@ -42,7 +43,7 @@ create table if not exists professor_Name(
 
 
 
-
+<!
 ```
  id | f_name  | l_name  | professor_id 
 ----+---------+---------+--------------
@@ -54,7 +55,7 @@ create table if not exists professor_Name(
   6 | Mahmoud | Ismael  |           11
   7 | Amr     | Mustafa |           13
 ```
-
+-->
 
 
 
@@ -67,7 +68,7 @@ create table if not exists person(
 	firstName varchar(50)
 );
 
-
+<!
 ```
  personid | lastname | firstname 
 ----------+----------+-----------
@@ -75,7 +76,7 @@ create table if not exists person(
         2 | Alice    | Bob
         3 | Smith    | Lee
 ```
-
+-->
 
 
 
@@ -88,6 +89,7 @@ create table if not exists address(
 );
 
 
+<!
 ```
  addressid |     city      |   state    | personid 
 -----------+---------------+------------+----------
@@ -95,8 +97,8 @@ create table if not exists address(
          2 | Leetcode      | California |        1
 
 
-````
-
+```
+-->
 
 ## INSERT steps
 
@@ -112,7 +114,7 @@ create table if not exists address(
 ## JOIN steps
 
 `SELECT person.firstName, lastName, city, state FROM person FULL OUTER JOIN address ON address.personId = person.personId;`
-
+<!
 ```
  firstname | lastname |     city      |   state
 -----------+----------+---------------+------------
@@ -121,3 +123,4 @@ create table if not exists address(
  Lee       | Smith    |               | 
 
 ```
+-->
