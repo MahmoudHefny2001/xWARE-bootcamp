@@ -3,7 +3,7 @@
 
 ## sudo -u postgres psql
 
-\l
+### \l
 
 
 ## Connect database Faculty_DB;
@@ -11,9 +11,9 @@
 \c faculty_db
 
 
-
+```
 INSERT INTO faculty (id ,name) VALUES (1, 'Mahmoud');
-
+```
 select * from faculty;
 
 
@@ -29,7 +29,7 @@ INSERT INTO department (id, name) VALUES(3,'CS');
 # select * from department;
 
 
-
+```
 INSERT INTO subject(id,name,code) VALUES(1,'Aya',11);
 
 INSERT INTO subject(id,name,code) VALUES(2,'Mohammed',22);
@@ -47,14 +47,14 @@ INSERT INTO subject(id,name,code) VALUES(7,'Bob',77);
 INSERT INTO subject(id,name,code) VALUES(8,'Ayman',88);
 
 INSERT INTO subject(id,name,code) VALUES(9,'Eman',99);
+```
 
----------------------------------
 
 INSERT INTO course(id,duration) VALUES(21,'3 week');
 
 INSERT INTO course(id,duration) VALUES(483,'8 week');
 
----------------------------------
+
 
 INSERT INTO Exams (id,date,duration) VALUES(1,'11-11-2022','3 month');
 
