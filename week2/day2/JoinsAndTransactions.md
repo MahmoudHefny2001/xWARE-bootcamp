@@ -8,7 +8,7 @@
 
 `INSERT INTO student() VALUES();`
 
-=====================================================================================
+
 
 ## Select commands of professors and students
 
@@ -19,7 +19,7 @@
 `When i open another session and select all the Professors and Students, the data was retrieved in the first session before i create the New Transaction will be shown in the second session`
 
 
-=====================================================================================
+
 
 ## Delete commands of Professors with salary greater than 2000
 
@@ -43,7 +43,6 @@
 
 `When i select all professors and students in the other session after i commit in the first session the same result will be shown in the other session as i select all professors and students in the first session`
 
-=====================================================================================
 
 ## Insert commands in professors table with a duplicated id
 
@@ -58,7 +57,6 @@ INSERT INTO Student() VALUES();
 
 `I will get an error when i try to insert commands in professors table with a duplicated id which is "current transaction is aborted, commands ignored until end of transaction block""`
 
-=====================================================================================
 
 
 ## Final Commit command in the exercise
