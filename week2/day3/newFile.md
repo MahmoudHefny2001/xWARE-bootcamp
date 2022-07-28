@@ -2,9 +2,9 @@
 
 ## Normalize Student and Professor
 
-```
 
-create table if not exists student_phones(
+
+# create table if not exists student_phones(
 	id serial primary key,
 	f_Phone int not null,
 	l_Phone int not null,
@@ -55,7 +55,7 @@ create table if not exists professor_Name(
 # Exercise 2
 
 
-create table if not exists person(
+# create table if not exists person(
 	personId serial primary key,
 	lastName  varchar(50),
 	firstName varchar(50)
@@ -72,7 +72,7 @@ create table if not exists person(
 ------>
 
 
-create table if not exists address(
+# create table if not exists address(
 	addressId serial primary key,
 	city varchar(40),
 	state varchar(40),
@@ -93,17 +93,17 @@ create table if not exists address(
 ## INSERT steps
 
 
-`INSERT INTO person(lastName, firstName) VALUES('Wang', 'Allen'), ('Alice', 'Bob');`
+INSERT INTO person(lastName, firstName) VALUES('Wang', 'Allen'), ('Alice', 'Bob');
 
-`INSERT INTO address(personId, city, state) VALUES(2, 'New York City', 'New York'), (1, 'Leetcode', 'California');`
+INSERT INTO address(personId, city, state) VALUES(2, 'New York City', 'New York'), (1, 'Leetcode', 'California');
 
-`INSERT INTO person(lastName, firstName) VALUES('Smith', 'Lee');`
+INSERT INTO person(lastName, firstName) VALUES('Smith', 'Lee');
 
 
 
 ## JOIN steps
 
-`SELECT person.firstName, lastName, city, state FROM person FULL OUTER JOIN address ON address.personId = person.personId;`
+SELECT person.firstName, lastName, city, state FROM person FULL OUTER JOIN address ON address.personId = person.personId;
 
 <!-------
 [
