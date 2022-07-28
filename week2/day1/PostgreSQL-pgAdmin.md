@@ -14,53 +14,53 @@
 ```
 INSERT INTO faculty (id ,name) VALUES (1, 'Mahmoud');
 ```
-select * from faculty;
+### select * from faculty;
 
 
 
-INSERT INTO department (id, name) VALUES(1, 'MATH101');
+### INSERT INTO department (id, name) VALUES(1, 'MATH101');
 
-INSERT INTO department (id, name) VALUES(2, 'IT);
+### INSERT INTO department (id, name) VALUES(2, 'IT);
 
-INSERT INTO department (id, name) VALUES(3,'CS');
+### INSERT INTO department (id, name) VALUES(3,'CS');
 
 
 
 # select * from department;
 
 
-```
-INSERT INTO subject(id,name,code) VALUES(1,'Aya',11);
 
-INSERT INTO subject(id,name,code) VALUES(2,'Mohammed',22);
+#### NSERT INTO subject(id,name,code) VALUES(1,'Aya',11);
 
-INSERT INTO subject(id,name,code) VALUES(3,'Alaa',33);
+#### NSERT INTO subject(id,name,code) VALUES(2,'Mohammed',22);
 
-INSERT INTO subject(id,name,code) VALUES(4,'Ahmed',44);
+#### NSERT INTO subject(id,name,code) VALUES(3,'Alaa',33);
 
-INSERT INTO subject(id,name,code) VALUES(5,'Aly',55);
+#### NSERT INTO subject(id,name,code) VALUES(4,'Ahmed',44);
 
-INSERT INTO subject(id,name,code) VALUES(6,'Mahmoud',66);
+#### NSERT INTO subject(id,name,code) VALUES(5,'Aly',55);
 
-INSERT INTO subject(id,name,code) VALUES(7,'Bob',77);
+#### NSERT INTO subject(id,name,code) VALUES(6,'Mahmoud',66);
 
-INSERT INTO subject(id,name,code) VALUES(8,'Ayman',88);
+#### NSERT INTO subject(id,name,code) VALUES(7,'Bob',77);
 
-INSERT INTO subject(id,name,code) VALUES(9,'Eman',99);
-```
+#### NSERT INTO subject(id,name,code) VALUES(8,'Ayman',88);
 
-
-INSERT INTO course(id,duration) VALUES(21,'3 week');
-
-INSERT INTO course(id,duration) VALUES(483,'8 week');
+#### NSERT INTO subject(id,name,code) VALUES(9,'Eman',99);
 
 
 
-INSERT INTO Exams (id,date,duration) VALUES(1,'11-11-2022','3 month');
+#### NSERT INTO course(id,duration) VALUES(21,'3 week');
 
-INSERT INTO Exams (id,date,duration) VALUES(6,'5-12-2022','3 week');
+#### NSERT INTO course(id,duration) VALUES(483,'8 week');
 
-INSERT INTO Exams (id,date,duration) VALUES(8,'10-1-2022','7 week');
+
+
+#### NSERT INTO Exams (id,date,duration) VALUES(1,'11-11-2022','3 month');
+
+#### NSERT INTO Exams (id,date,duration) VALUES(6,'5-12-2022','3 week');
+
+#### NSERT INTO Exams (id,date,duration) VALUES(8,'10-1-2022','7 week');
 
 *************************************************************
 
@@ -78,9 +78,10 @@ INSERT INTO Exams (id,date,duration) VALUES(8,'10-1-2022','7 week');
 ##  Add Age Column in Student Table
 ##  Set Students Age
 ##  Check All Exams Have Different Date And Time And If So Change These So Every Exam Have Different Date And Time
-
+ 
+ 
 select * from student;
-
+ 
 select * from professor;
 
 select * from subject;
