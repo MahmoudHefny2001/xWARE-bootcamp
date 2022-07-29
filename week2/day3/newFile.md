@@ -93,11 +93,11 @@ create table if not exists professor_Name(
 ## INSERT steps
 
 
-INSERT INTO person(lastName, firstName) VALUES('Wang', 'Allen'), ('Alice', 'Bob');
+- INSERT INTO person(lastName, firstName) VALUES('Wang', 'Allen'), ('Alice', 'Bob');
 
-INSERT INTO address(personId, city, state) VALUES(2, 'New York City', 'New York'), (1, 'Leetcode', 'California');
+- INSERT INTO address(personId, city, state) VALUES(2, 'New York City', 'New York'), (1, 'Leetcode', 'California');
 
-INSERT INTO person(lastName, firstName) VALUES('Smith', 'Lee');
+- INSERT INTO person(lastName, firstName) VALUES('Smith', 'Lee');
 
 
 
