@@ -2,12 +2,12 @@
 
 * Design Messaging and Notification System in MongoDB
 * Messages Collection Will Documents, Every Document Will Have
-  . Sender info Like (id, name, etc..) and The Sender May Be Student Or Professor
-  . Reciever info Like (id, name, etc..) and The Sender May Be Student Or Professor
+  - Sender info Like (id, name, etc..) and The Sender May Be Student Or Professor
+  - Reciever info Like (id, name, etc..) and The Sender May Be Student Or Professor
 * Message
 * Notification Collection Will Documents, Every Document Will Have
-  . Sender info Like (id, name, etc..) and The Sender May Be Student Or Professor
-  . Reciever info Like (id, name, etc..) and The Sender May Be Student Or Professor
+  - Sender info Like (id, name, etc..) and The Sender May Be Student Or Professor
+  - Reciever info Like (id, name, etc..) and The Sender May Be Student Or Professor
 * type Notification Type (Message For Now)
 * content Notification Content
 * is_read is Notification Read
