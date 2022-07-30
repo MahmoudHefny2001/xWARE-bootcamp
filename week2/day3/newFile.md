@@ -1,117 +1,155 @@
-# Exercise 1
+## **Apply Normalization Concept with Postgresql**
+# make database Without Normalization
+## professor table
 
-## Normalize Student and Professor
+```sql
+create table if not exists professor(
+    id int primary key NOT NULL,
+    f_name varchar(10) NOT NULL,
+    l_name varchar(10) NOT NULL,
+	name varchar(30) NOT NULL,
+    salary REAL NOT NULL,
+    Age int NOT NULL ,
+	birth_date varchar(10) NOT NULL,
+	image varchar(5) ,
+	email varchar(40) NOT NULL
+);
+```
+
+## student table
+
+```sql
+create table if not exists student(
+    id int primary key NOT NULL,
+    f_name varchar(10) NOT NULL,
+    l_name varchar(10) NOT NULL,
+    f_phone int NOT NULL,
+    l_phone int,
+    birth_date varchar(20) NOT NULL ,
+	image varchar(5) ,
+	email varchar(40) NOT NULL
+);
+```
+
+> :warning: **the email is small so inrease him with alter**
+```
+-- ALTER TABLE student ALTER COLUMN email TYPE varchar(40);
+```
+## insert records
+``` sql
+insert into student (id,f_name,l_name,f_phone,birth_date,email)
+
+values (1,'MOKHTAR','YOUSEF',01111442600,'27-11-1999','FakeGmail@gmail.com');
+
+insert into student (id,f_name,l_name,f_phone,birth_date,email)
+
+values (2,'AYA','ASHRAF',01117642600,'27-76-2001','fakeEmail@gmail.com');
+
+insert into professor (id,f_name,l_name,name,salary,Age,birth_date,email)
+
+values (1,'ALEX','BOB','ALEX BOB MARTIN',2000,40,'1-1-2000','AHMED-AHMED@gmail.com');
+
+insert into professor (id,f_name,l_name,name,salary,Age,birth_date,email)
+
+values (2,'AHMED','MOHAMMED','AHMED MOHAMMED ALY',2000,40,'1-1-2001','ALI-ALI@gmail.com');
+```
+
+## to show current data
+``` sql
+select * from student;
+select *from professor;
+```
+
+******************************************
+
+
+# drop coulmns and make normalization
+```sql
+ALTER TABLE professor
+DROP f_name;
+ALTER TABLE professor
+DROP l_name;
+ALTER TABLE professor
+DROP name;
+ALTER TABLE professor
+DROP email;
+
+ALTER TABLE student
+DROP f_name;
+ALTER TABLE student
+DROP l_name;
+ALTER TABLE student
+DROP f_phone;
+ALTER TABLE student
+DROP l_phone;
+ALTER TABLE student
+DROP email;
+
+```
+```sql
+create table if not exists professor( 
+       id  primary key NOT NULL, 
+	image varchar(5),
+	salary REAL NOT NULL, 
+	 Age int NOT NULL ,
+	 birth_date varchar(10) NOT NULL,
+);
+
+create table if not exists professor_name(
+	 id serial  primary key, 
+	 f_name varchar(10) NOT NULL, 
+   	 l_name varchar(10) NOT NULL, 
+	 name varchar(30) NOT NULL,
+     professor_id int references professor(id)
+);
+
+create table if not exists professor_links(
+	 id serial int primary key NOT NULL, 
+	 email varchar(40) NOT NULL,
+	 linkedin_email varchar(40) NOT NULL,
+	 professor_id int references professor(id)
+	);
+create table if not exists professor_phone(
+	 id serial  primary key NOT NULL, 
+   	 phone int NOT NULL, 
+	 professor_id int references professor(id)
+);
 
 
 
-# create table if not exists student_phones(
-	id serial primary key,
-	f_Phone int not null,
-	l_Phone int not null,
+
+create table if not exists student( 
+    id int primary key NOT NULL, 
+	 birth_date varchar(10) NOT NULL,
+	image varchar(5) 
 	
-	student_id int references student(id)
+);
+create table if not exists student_name(
+	 id serial int primary key NOT NULL, 
+	 f_name varchar(10) NOT NULL, 
+   	 l_name varchar(10) NOT NULL, 
+	 name varchar(30) NOT NULL,
+     student_id int references student(id)
 );
 
 
-
-<!----
- id | f_phone | l_phone | student_id 
-----+---------+---------+------------
-  1 |  654365 |  124578 |          1
-  2 |   56432 |  789456 |          2
-  3 |   84654 |  147852 |          3
-  4 |   54532 |  963258 |          4
-  5 |    5612 |  475829 |          5
-  6 |   56122 |  456287 |          8
-  7 |   56432 |  971355 |         10
-  8 |  656532 |  001144 |         11
---->
-
-
-
-create table if not exists professor_Name(
-	id serial primary key,
-	f_Name varchar(40),
-	l_Name varchar(40),
+create table if not exists student_connect(
+	 id serial  primary key NOT NULL, 
+	 email varchar(40) NOT NULL,
+   	 phone int NOT NULL, 
+	 student_id int references student(id)
 	
-	professor_id int references professor(id)
 );
+```
+## try to insert on normalized table
+``` sql
+DELETE FROM professor
+WHERE id = 1;
 
+insert into professor(id,salary,Age,birth_date) values (1,1000,20,'7/7/1992');
+insert into professor_name(professor_id,f_name,l_name,name) values (1,'MEKKY','ALI','AYMAN ASHRAF');
 
+insert into professor_links(professor_id,email,linkedin_email) values (1,'MAHMOUD@GMAIL.COM,'FAKELINK@LINKEDIN.COM');
 
-
-<!----
- id | f_name  | l_name  | professor_id 
-----+---------+---------+--------------
-  1 | Hamada  | Hassan  |            1
-  2 | Hossam  | Ali     |            2
-  3 | Mustafa | Hussein |            3
-  4 | Khaled  | Omar    |            4
-  5 | Ahmed   | Ali     |            5
-  6 | Mahmoud | Ismael  |           11
-  7 | Amr     | Mustafa |           13
------->
-
-# Exercise 2
-
-
-# create table if not exists person(
-	personId serial primary key,
-	lastName  varchar(50),
-	firstName varchar(50)
-);
-
-<!------
-{
- personid | lastname | firstname 
-----------+----------+-----------
-        1 | Wang     | Allen
-        2 | Alice    | Bob
-        3 | Smith    | Lee
-}	
------->
-
-
-# create table if not exists address(
-	addressId serial primary key,
-	city varchar(40),
-	state varchar(40),
-	
-	person_id int references person(personId)
-);
-
-
-<!------
-{
- addressid |     city      |   state    | personid 
------------+---------------+------------+----------
-         1 | New York City | New York   |        2
-         2 | Leetcode      | California |        1
-}
----->
-
-## INSERT steps
-
-
-- INSERT INTO person(lastName, firstName) VALUES('Wang', 'Allen'), ('Alice', 'Bob');
-
-- INSERT INTO address(personId, city, state) VALUES(2, 'New York City', 'New York'), (1, 'Leetcode', 'California');
-
-- INSERT INTO person(lastName, firstName) VALUES('Smith', 'Lee');
-
-
-
-## JOIN steps
-
-SELECT person.firstName, lastName, city, state FROM person FULL OUTER JOIN address ON address.personId = person.personId;
-
-<!-------
-[
- firstname | lastname |     city      |   state
------------+----------+---------------+------------
- Bob       | Alice    | New York City | New York
- Allen     | Wang     | Leetcode      | California
- Lee       | Smith    |               | 
-]
----->
+```
 
