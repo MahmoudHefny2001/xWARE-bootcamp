@@ -68,10 +68,6 @@ INSERT INTO Student() VALUES();
 `When i rollback, it shows me a Warning which is "there is no transaction in progress" and Rollback work in the next line`
 
 
---------------------------------------------------
-
-
-
 # "Join" exercise
 
 - Select subject.id, name, code, duration from subject INNER JOIN course ON course.subject_id = subject.id;
@@ -81,3 +77,46 @@ INSERT INTO Student() VALUES();
 - SELECT student.id, f_name, l_name, line_1Address, Line_2Address FROM student INNER JOIN student_address ON student_address.student_id = student.id INNER JOIN address ON student_address.address_id = address.id;
 
 - SELECT student.id, f_Name, l_Name, duration from student INNER JOIN course_enrolment ON course_enrolment.student_id = student.id INNER JOIN course ON course.id = course_enrolment.course_id;
+
+# This is Join Exercise
+## Using College Management System Database With Joins
+### Select Subject id, Subject Name, Subject Code, Course Duration in One Query
+
+```bash
+select subject.id,subject.name,subject.code,course.duration
+from subject
+inner join course
+on subject.code = course.subject_code;
+```
+
+### Select subject id, subject name, subject code, course duration, professor first_name, professor last_name, in One Query
+
+```bash
+select subject.id,subject.name,subject.code,course.duration,professor.name
+from course
+inner join subject
+on course.sub_code = subject.sub_code
+inner join professor
+on course.p_id = professor.p_id;
+```
+
+
+
+```bash
+select student.id,student.f_name,student.l_name,student.f_phone,student.birth_date,student.age,Address.line1
+from student_Address
+inner join student
+on student_Address.student_id = student.id
+inner join Address
+on student_Address.address_id= address.id;
+```
+
+### Select All Student Name In Every Couse.
+
+```bash
+select student.name
+from student
+inner join course_Enrollment
+on student.id = course_Enrollment.student_id;
+```
+ 
