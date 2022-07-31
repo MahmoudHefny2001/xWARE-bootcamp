@@ -1,3 +1,5 @@
+# \c person
+
 SQL 
 
 ```
@@ -5,6 +7,17 @@ CREATE TABLE IF NOT EXISTS person(
 	ID serial primary key,
 	email varchar(100)
 );
+```
+# \d person
+
+```
+                                  Table "public.person"
+ Column |          Type          | Collation | Nullable |              Default
+--------+------------------------+-----------+----------+------------------------------------
+ id     | integer                |           | not null | nextval('person_id_seq'::regclass)
+ email  | character varying(100) |           |          |
+Indexes:
+    "person_pkey" PRIMARY KEY, btree (id)
 ```
 
 - INSERT INTO person(email) VALUES('hefny4@gmail.com');
@@ -17,21 +30,7 @@ CREATE TABLE IF NOT EXISTS person(
 
 # SELECT lower(email) FROM person;
 
-# \c person
-
 You are now connected to database "person" as user "postgres".
-
-# \d person
-
-```
-                                  Table "public.person"
- Column |          Type          | Collation | Nullable |              Default
---------+------------------------+-----------+----------+------------------------------------
- id     | integer                |           | not null | nextval('person_id_seq'::regclass)
- email  | character varying(100) |           |          |
-Indexes:
-    "person_pkey" PRIMARY KEY, btree (id)
-```
 
 # SELECT * FROM person;
 
