@@ -1,8 +1,8 @@
-\c person
+# \c person
 
 You are now connected to database "person" as user "postgres".
 
-\d person
+# \d person
 
                                    Table "public.person"
  Column |          Type          | Collation | Nullable |              Default
@@ -13,7 +13,7 @@ Indexes:
     "person_pkey" PRIMARY KEY, btree (id)
 
 
-SELECT * FROM person;
+# SELECT * FROM person;
 
 
 id |         email
@@ -28,18 +28,13 @@ id |         email
 (7 rows)
 
 
-
-
- DELETE FROM person a USING person b WHERE a.id < b.id AND a.email = b.email;
-
-
-
+ # DELETE FROM person a USING person b WHERE a.id < b.id AND a.email = b.email;
 
 
  DELETE 3
 
 
-SELECT * FROM person;
+# SELECT * FROM person;
 
 
 
