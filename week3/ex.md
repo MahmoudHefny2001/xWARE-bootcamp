@@ -32,7 +32,19 @@ Indexes:
 
 # SELECT lower(email) FROM person;
 
-You are now connected to database "person" as user "postgres".
+```
+ id         email
+---------+-----------------------
+  1      | "hefny4@gmail.com"
+  2      | "fakeaccount@gmail.com"
+  3      | "fakeaccount@gmail.com"
+  4	 | "john5@gmail.com"
+  5	 | "pop88@gmail.com"
+  6      | "john5@gmail.com"
+  7      | "pop88@gmail.com"
+ ``` 
+ 
+* You are now connected to database "person" as user "postgres".
 
 # SELECT * FROM person;
 
