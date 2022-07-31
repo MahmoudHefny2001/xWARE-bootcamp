@@ -47,7 +47,7 @@ id |         email
 (7 rows)
 ```
 
- # DELETE FROM person a USING person b WHERE a.id < b.id AND a.email = b.email;
+ # DELETE FROM person a USING person b WHERE a.id > b.id AND a.email = b.email;
 
 
  DELETE 3
@@ -60,9 +60,9 @@ id |         email
  id |         email
 ----+-----------------------
   1 | hefny4@gmail.com
-  3 | fakeAccount@gmail.com
-  6 | john5@gmail.com
-  7 | pop88@gmail.com
+  2 | fakeAccount@gmail.com
+  4 | john5@gmail.com
+  5 | pop88@gmail.com
 (4 rows)
 
 ```
