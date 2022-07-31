@@ -1,5 +1,3 @@
-# \c person
-
 SQL 
 
 ```
@@ -7,6 +5,10 @@ CREATE TABLE IF NOT EXISTS person(
 	ID serial primary key,
 	email varchar(100)
 );
+```
+# \c person
+```
+ - person=#
 ```
 # \d person
 
