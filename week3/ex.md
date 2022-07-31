@@ -1,4 +1,4 @@
-sql 
+SQL 
 
 ```
 CREATE TABLE IF NOT EXISTS person(
