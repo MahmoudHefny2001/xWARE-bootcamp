@@ -29,8 +29,7 @@ select * from professor;
 ###  Open another session and select all the Professors and students
 	What is the difference? 
 ```sql
-1 - ctrl + shift + t 
-2 -  to enter DB : sudo -u postgres psql
+
 **" the insert is not added yet because the transaction not commited "**
 
 ```
