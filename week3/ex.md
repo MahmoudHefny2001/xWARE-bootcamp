@@ -1,3 +1,18 @@
+sql 
+
+```
+CREATE TABLE IF NOT EXISTS person(
+	ID serial primary key,
+	email varchar(100)
+);
+```
+
+- INSERT INTO person(email) VALUES('hefny4@gmail.com');
+- INSERT INTO person(email) VALUES('fakeAccount@gmail.com');
+- INSERT INTO person(email) VALUES('fakeAccount@gmail.com');
+
+# SELECT lower(email) FROM person;
+
 # \c person
 
 You are now connected to database "person" as user "postgres".
