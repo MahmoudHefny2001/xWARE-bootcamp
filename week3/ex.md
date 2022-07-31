@@ -4,18 +4,19 @@ You are now connected to database "person" as user "postgres".
 
 # \d person
 
-                                   Table "public.person"
+```
+                                  Table "public.person"
  Column |          Type          | Collation | Nullable |              Default
 --------+------------------------+-----------+----------+------------------------------------
  id     | integer                |           | not null | nextval('person_id_seq'::regclass)
  email  | character varying(100) |           |          |
 Indexes:
     "person_pkey" PRIMARY KEY, btree (id)
-
+```
 
 # SELECT * FROM person;
 
-
+```
 id |         email
 ----+-----------------------
   1 | hefny4@gmail.com
@@ -26,7 +27,7 @@ id |         email
   6 | john5@gmail.com
   7 | pop88@gmail.com
 (7 rows)
-
+```
 
  # DELETE FROM person a USING person b WHERE a.id < b.id AND a.email = b.email;
 
@@ -36,7 +37,7 @@ id |         email
 
 # SELECT * FROM person;
 
-
+```
 
  id |         email
 ----+-----------------------
@@ -46,6 +47,7 @@ id |         email
   7 | pop88@gmail.com
 (4 rows)
 
+```
 
 
 
