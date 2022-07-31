@@ -10,6 +10,10 @@ CREATE TABLE IF NOT EXISTS person(
 - INSERT INTO person(email) VALUES('hefny4@gmail.com');
 - INSERT INTO person(email) VALUES('fakeAccount@gmail.com');
 - INSERT INTO person(email) VALUES('fakeAccount@gmail.com');
+- INSERT INTO person(email) VALUES ('john5@gmail.com');
+- INSERT INTO person(email) VALUES ('pop88@gmail.com');
+- INSERT INTO person(email) VALUES ('john5@gmail.com');
+- INSERT INTO person(email) VALUES ('pop88@gmail.com');
 
 # SELECT lower(email) FROM person;
 
