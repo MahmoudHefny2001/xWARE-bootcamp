@@ -1,3 +1,4 @@
+/*
 ``python``
 class Solution:
     
@@ -17,3 +18,5 @@ class Solution:
         
        avg = ((minimum + maximum + sum ) / len(salary))
        return avg
+*/
+TO be Edited
