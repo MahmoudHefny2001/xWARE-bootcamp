@@ -4,12 +4,16 @@
     - for i in range(1,n+1):
         -- sum+=i
 ###  return sum
-    
+
+
 # def product(n):
     - product = 1 
     - for i in range(1,n+1):
         -- product*=i
-###  return product
+        
+####  return product
+    
+    
     
 - n=int(input("Enter a number : "))
 
