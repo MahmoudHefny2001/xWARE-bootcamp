@@ -1,3 +1,4 @@
+```
 def stutter(word):
 	list = []
 	for i in word:
@@ -9,3 +10,6 @@ def stutter(word):
     print(list)
 stutter("incredible")
 
+```
+
+# To Be EDITED	
