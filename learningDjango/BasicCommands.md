@@ -28,6 +28,9 @@
 - Creating the Polls app
 # python3 manage.py startapp polls
 
+- Leaving port
+# sudo fuser -k 8000/tcp
+
 ## Write your first view
 	
 	- cd polls
