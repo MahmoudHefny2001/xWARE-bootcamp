@@ -1,0 +1,17 @@
+{% extends 'user/base.html' %}
+
+{% block content %}
+
+{% if is_user_found == True %}
+
+{% include 'user/printUser.html' %}
+
+
+
+{% else %}
+
+<p>user not found</p>
+
+{% endif %}
+
+{% endblock %}

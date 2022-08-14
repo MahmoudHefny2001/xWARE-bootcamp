@@ -1,0 +1,28 @@
+{% extends 'todo/base.html' %}
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+    </head>
+
+    <body>
+
+        <form method="GET">
+
+            {% csrf_token %}
+      
+            <h1>Create Task</h1>
+           
+            <input type="text" name="Task" placeholder="Task" />
+            <br>
+            <button type="submit" class="btn">save</button>
+            <br>      
+      
+          </form>
+
+    </body>
+
+</html>
