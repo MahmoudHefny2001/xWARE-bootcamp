@@ -10,7 +10,7 @@ def double(x):
     return x * 2
 
 print(double(5))
-'''
+
 
 double = lambda x: x * 2
 
@@ -28,3 +28,13 @@ print(add(1, 2, 3))
 print(full_name('Mahmoud', 'Hefny'))
 print(age_check(12))
 print(age_check(19))
+
+'''
+
+x = lambda x: x * 2
+print(x(6))
+
+
+
+
+

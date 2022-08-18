@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Task
 from .forms import Create_task_form
+from django.views.decorators.http import require_http_methods, require_GET, require_POST
+from django.http import HttpRequest, HttpResponseRedirect
 
 # Create your views here.
 
