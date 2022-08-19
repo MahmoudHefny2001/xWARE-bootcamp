@@ -4,9 +4,32 @@
 
 {% block breadcrumb %}
     <li class="breadcrumb-item"><a href="{% url 'home' %}">Boards</a></li>
-        <li class="breadcrumb-item active"> {{board.name}} </li>
+        <li class="breadcrumb-item active"> {{board.name}} </li><br>
 {% endblock %}
 
 {% block content %}
+    <a href="{% url 'new topic' board.pk %}" class="btn btn-primary">New topic</a><br></br>
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>Topic</th>
+                <th>Created By</th>
+                <th>Number Of posts</th>
+                <th>Views</th>
+                <th>Creation Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for topic in board.topics.all %}
+                <tr>
+                    <td>{{ topic.subject }}</td>
+                    <td>{{ topic.creator.username}}</td>
+                    <td></td>
+                    <td></td>
+                    <td>{{ topic.created_date }}</td>
+                </tr>
+            {% endfor%}
+        </tbody>
+    </table>
 {% endblock %}
 
