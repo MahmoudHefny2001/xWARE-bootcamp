@@ -8,13 +8,13 @@ class Board(models.Model):
         return self.name
 
 class Topic(models.Model):
-    subject = models.CharField(max_length=250)
+    topic = models.CharField(max_length=250)
     board = models.ForeignKey(Board, related_name = 'topics', on_delete = models.CASCADE)
     creator = models.ForeignKey(User, related_name = 'topics', on_delete = models.CASCADE) 
     created_date = models.DateTimeField(auto_now_add = True)
 
 class Post(models.Model):
-    message = models.TextField(max_length=800)
+    essay = models.TextField(max_length=800)
     topic = models.ForeignKey(Topic, related_name = 'posts', on_delete = models.CASCADE)
     creator = models.ForeignKey(User, related_name = 'posts', on_delete = models.CASCADE)
     created_date = models.DateTimeField(auto_now_add = True)

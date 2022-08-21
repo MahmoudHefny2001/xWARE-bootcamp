@@ -22,10 +22,10 @@
         <tbody>
             {% for topic in board.topics.all %}
                 <tr>
-                    <td>{{ topic.subject }}</td>
-                    <td>{{ topic.creator.username}}</td>
-                    <td></td>
-                    <td></td>
+                    <td>{{ topic.topic }}</td>
+                    <td>{{ topic.creator.username }}</td>
+                    <td>0</td>
+                    <td>0</td>
                     <td>{{ topic.created_date }}</td>
                 </tr>
             {% endfor%}
